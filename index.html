@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Kaisei+Decol:400,700|Kaisei+HarunoUmi:400|Kaushan+Script:400|Jomolhari:400" rel="stylesheet">
+  
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Kaisei HarunoUmi', sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    h1 {
+      font-family: 'Kaushan Script', cursive;
+      color: #4a90e2;
+      margin-bottom: 20px;
+    }
+    #waste-info {
+      width: 80%;
+      max-width: 800px;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .entry {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    .entry:last-child {
+      border-bottom: none;
+    }
+    .entry p {
+      margin: 5px 0;
+    }
+    #area-search {
+      margin: 20px;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:focus-visible {
+      outline: 2px solid #4a90e2;
+    }
+    button:hover {
+      background-color: #357ab8;
+    }
+  </style>
+
+    
+    
+  </head>
+  <body>
+    <div class="FINAL-WEBSITE-FRAME">
+      <div class="div">
+        <div class="BLOG-FRAME">
+          <div class="div-wrapper">
+            <div class="frame">
+              <div class="div-wrapper">
+                <div class="blog-page">
+                  <div class="overlap-group">
+                    <img class="unsplash" src="img/unsplash-cckf4tshauw-2.png" />
+                    <div class="text-wrapper">Blogs</div>
+                    <div class="text-wrapper-2">learn about waste management</div>
+                    <img class="line" src="img/image.svg" />
+                    <div class="frame-2">
+                      <p class="going-zero-waste">
+                        <span class="span">“Going Zero waste.”<br /></span>
+                        <span class="text-wrapper-3">-KATHRYN<br />KELLGG</span>
+                      </p>
+                      <img class="image" src="./img/image 5.png" />
+                    </div>
+                    <div class="frame-3">
+                      <div class="group"></div>
+                      <p class="take-action-to-make">“Take action to make less Trash”<br />-ROBIN GREENFIELD</p>
+                    </div>
+                    <div class="frame-4">
+                      <div class="group-2"></div>
+                      <div class="urban-transformation">“Urban <br />Transformation”<br />-LAKSHMI<br />NARAYAN</div>
+                    </div>
+                    <div class="route-tracking"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-ana-frame">
+          <div class="overlap-group-wrapper">
+            <div class="overlap-group-2">
+              <div class="text-wrapper-4">Data Analysis</div>
+              <p class="p">Track Live Location of Garbage Truck arriving in your locality</p>
+              <div id="area-search">
+                <input type="text" id="area-name" placeholder="Enter Area Name">
+                <button onclick="fetchWasteDataByArea(document.getElementById('area-name').value)">Search by Area</button>
+              </div>
+            
+              <!-- Waste Information Display Container -->
+              <div id="waste-info">
+                <!-- Waste data will be displayed here -->
+              </div>
+            </div>
+            
+          
+          </div>
+        </div>
+        <div class="group-wrapper">
+          <div class="overlap-wrapper">
+            <div class="overlap">
+              <img class="unsplash-cckftshauw" src="img/unsplash-cckf4tshauw-3.png" />
+              <div class="text-wrapper-5">Data Analysis</div>
+              <p class="text-wrapper-6">Track Live Location of Garbage Truck arriving in your locality</p>
+              <div class="route-traki">
+                <div class="div-wrapper">
+                  <div class="route-traking">
+                    <div class="overlap-group-3">
+                      <img class="img" src="img/line-1.svg" />
+                      <div class="text-wrapper-7">Route Tracking</div>
+                    </div>
+                    <p class="text-wrapper-8">Track Live Location of Garbage Truck arriving in your locality</p>
+                    <img class="map-maker-mumbai" src="./img/🌎 Map Maker_ Mumbai, Maharashtra, India (Standard).png" />
+                    <div class="frame-5"></div>
+                    <div class="mod-no-frame"></div>
+                    <div class="mod-no-frame-2"></div>
+                    <div class="text-wrapper-9">Time slots:</div>
+                    <div class="text-wrapper-10">Driver Name:</div>
+                    <div class="text-wrapper-11">Model No. :</div>
+                    <img class="image-2" src="img/image.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-6">
+          <div class="overlap-2">
+            <div class="div-2"></div>
+            <div class="homepage">
+              <div class="overlap-group-4">
+                <div class="frame-7">
+                  <div class="group-3"><div class="text-wrapper-12">SustainBin</div></div>
+                </div>
+                <img class="flowbite-trash-bin" src="./img/flowbite_trash-bin-outline.svg" />
+                <img class="image-3" src="" />
+                <div class="text-wrapper-13">Login</div>
+                <div class="login"></div>
+                <div class="rectangle"></div>
+                <p class="about-us-our-mission">
+                  <span class="text-wrapper-14">About us:<br /></span>
+                  <span class="text-wrapper-15"
+                    ><br />Our mission is to enhance city life by making waste collection smarter, moreefficient and
+                    environmentally friendly.<br />Designed to support Sustainable Devlopment Goal- 11, our platform is
+                    dedicated to create Sustainable cities and communities.<br /><br />Join us on our journey towards
+                    cleaner, smarter and more sustainable world.</span
+                  >
+                </p>
+                <div class="blogs-icon"><div class="text-wrapper-16">Blogs</div></div>
+                <div class="routetracking-icon"><div class="text-wrapper-17">Route-Tracking</div></div>
+                <div class="data-icon"><div class="text-wrapper-18">Data</div></div>
+                <div class="frame-8"></div>
+                <img class="unsplash-jyusqabvy" src="./img/unsplash_JyUS82qAbvY.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-9">
+          <div class="overlap-3">
+            <div class="landing-pg-wrapper"><div class="landing-pg"></div></div>
+            
+       
+      </div>
+      
+    </div>
+    <script>
+      async function fetchWasteData() {
+        try {
+          const response = await fetch("http://localhost:8000/api/waste/all");
+          const wasteData = await response.json();
+          console.log(wasteData);
+          displayWasteData(wasteData);
+        } catch (error) {
+          console.error("Error fetching waste data:", error);
+        }
+      }
+  
+      async function fetchWasteDataByArea(areaName) {
+        try {
+          const response = await fetch(`http://localhost:8000/api/waste/area?name=${encodeURIComponent(areaName)}`);
+          const areaData = await response.json();
+          console.log(areaData);
+          displayWasteData(areaData);
+        } catch (error) {
+          console.error("Error fetching area data:", error);
+        }
+      }
+  
+      function displayWasteData(data) {
+        const container = document.querySelector("#waste-info");
+        container.innerHTML = "";  // Clear previous data
+  
+        data.forEach(entry => {
+          const info = document.createElement("div");
+          info.classList.add("entry");
+          info.innerHTML = `
+            <p><strong>Area:</strong> ${entry.area_name}</p>
+            <p><strong>Waste Type:</strong> ${entry.waste_type}</p>
+            <p><strong>Collection Date:</strong> ${entry.collection_date}</p>
+          `;
+          container.appendChild(info);
+        });
+      }
+  
+      // Load all data on page load
+      fetchWasteData();
+    </script>
+  
+  
+    
+    
+  </body>
+</html>
